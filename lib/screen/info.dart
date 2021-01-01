@@ -18,14 +18,17 @@ class InfoPage extends StatelessWidget {
           child: Card(
               color: Colors.black,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Image(
                     image: NetworkImage(notez[count].url),
                   ),
                   Text(
-                    notez[count].date,
-                    //textAlign:,
-                    style: TextStyle(fontSize: 30),
+                    'Date: ' + notez[count].date,
+                    style: TextStyle(
+                        color: Colors.cyan,
+                        fontSize: 27,
+                        fontWeight: FontWeight.bold),
                   ),
                   Text(
                     notez[count].explanation,
